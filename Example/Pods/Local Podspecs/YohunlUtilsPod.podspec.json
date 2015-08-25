@@ -1,16 +1,16 @@
 {
   "name": "YohunlUtilsPod",
-  "version": "0.1.0",
-  "summary": "A short description of YohunlUtilsPod.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/YohunlUtilsPod",
+  "version": "1.0.0",
+  "summary": "测试pod生成framework的YohunlUtilsPod.",
+  "description": "测试用的,我们用来测试使用pod lib create 生成的framework工程",
+  "homepage": "https://github.com/yohunl/YohunlUtilsPod",
   "license": "MIT",
   "authors": {
     "yohunl": "yohunl@163.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/YohunlUtilsPod.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/yohunl/YohunlUtilsPod.git",
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "7.0"
@@ -20,6 +20,11 @@
   "resource_bundles": {
     "YohunlUtilsPod": [
       "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "AFNetworking": [
+
     ]
   }
 }

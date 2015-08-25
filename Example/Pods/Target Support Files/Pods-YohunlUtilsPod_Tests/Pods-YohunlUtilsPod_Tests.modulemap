@@ -1,6 +1,0 @@
-framework module Pods_YohunlUtilsPod_Tests {
-  umbrella header "Pods-YohunlUtilsPod_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

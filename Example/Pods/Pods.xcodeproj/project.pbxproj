@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		057BB8C9D916C02321DB4E3EDE91FB34 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0375416421479F74AE51ADA4EB1DE5FA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098D38D138D1E3A80C16C8933EFD958A /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = F60986BCC4FD64CE6F99C6E05380B06F /* UIImage+Snapshot.m */; };
+		0993F1AC1B8C75BE0053583D /* YONetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 0993F1AA1B8C75BE0053583D /* YONetwork.h */; };
+		0993F1AD1B8C75BE0053583D /* YONetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993F1AB1B8C75BE0053583D /* YONetwork.m */; };
 		14BDD9C19BAE55C2B416208CEF5C5CE5 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 581D36A42181C24FDF4C6B78C9D0255B /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		184BCE14C389736605285CA6FBD76331 /* Pods-YohunlUtilsPod_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B47A0C595514593DE578911DFFBFF03A /* Pods-YohunlUtilsPod_Tests-dummy.m */; };
 		305D40C8BC5C43877885342F76BA3410 /* YohunlUtilsPod.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C26662BDFCCE414CCE2369BF1EDCDBD7 /* YohunlUtilsPod.bundle */; };
@@ -28,7 +30,6 @@
 		B4B01E7DDA55D62A3765C40AB5AF5A36 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7407522BA154E594D0D500398FF6E5 /* UIImage+Diff.m */; };
 		C32078B472E7F7F301258FB40C443387 /* YohunlUtilsPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EE1311EECABD175A28464F6CBC25DE /* YohunlUtilsPod-dummy.m */; };
 		D44C33463C6D22F8EA5C084494347A63 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 183CE6887AB775B3E84CB07A612A01F7 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB9063F1B3730996FAC91058CB118945 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FBB3EC522C9368A1B164BB17F6704F /* ReplaceMe.m */; };
 		E0F2E618E132D25AD12D4FCCC7B625ED /* Pods-YohunlUtilsPod_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8CAF9FD7C4C8834A1F1F9C93AEAD947 /* Pods-YohunlUtilsPod_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5383566A3B3CF62B8A51F5B66E619E5 /* Pods-YohunlUtilsPod_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EE93E74C5D456B1169C1FEB5F62EED /* Pods-YohunlUtilsPod_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED7AD5752EB29C1CB3DBD2462A1CAAB0 /* YohunlUtilsPod-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C615194C3BF15D353A89C7BBDFD30015 /* YohunlUtilsPod-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,6 +75,8 @@
 		05ABE9E8805093FB077225EBC0A2CFCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		076BA22FBFDB4C5304954DAC59EF0980 /* Pods-YohunlUtilsPod_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YohunlUtilsPod_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		07EE1311EECABD175A28464F6CBC25DE /* YohunlUtilsPod-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YohunlUtilsPod-dummy.m"; sourceTree = "<group>"; };
+		0993F1AA1B8C75BE0053583D /* YONetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YONetwork.h; sourceTree = "<group>"; };
+		0993F1AB1B8C75BE0053583D /* YONetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YONetwork.m; sourceTree = "<group>"; };
 		0C121108A8BC0EEE1033A1D3739F26CC /* Pods-YohunlUtilsPod_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-YohunlUtilsPod_Example.modulemap"; sourceTree = "<group>"; };
 		183CE6887AB775B3E84CB07A612A01F7 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		1A07BCC19E0973A555520315AD358D56 /* Pods-YohunlUtilsPod_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YohunlUtilsPod_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -86,7 +89,6 @@
 		4BD2D026071D7FD2BE689CCD1D3B9EF6 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		4C9640A6662315F4B5C8209D7D43CE25 /* YohunlUtilsPod-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YohunlUtilsPod-prefix.pch"; sourceTree = "<group>"; };
 		4F9CCD4A1D6CD1FBC0FFC9D577466102 /* YohunlUtilsPod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YohunlUtilsPod.xcconfig; sourceTree = "<group>"; };
-		53FBB3EC522C9368A1B164BB17F6704F /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		5584B1D79E3D17AF4F430EF0FE35E0AA /* Pods-YohunlUtilsPod_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YohunlUtilsPod_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		581D36A42181C24FDF4C6B78C9D0255B /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		6032CD5EA1194D270555F5F2AEB73F2F /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
@@ -323,7 +325,8 @@
 		D35A53D7FDC0F286C6A37B1AA3D83F90 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				53FBB3EC522C9368A1B164BB17F6704F /* ReplaceMe.m */,
+				0993F1AA1B8C75BE0053583D /* YONetwork.h */,
+				0993F1AB1B8C75BE0053583D /* YONetwork.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED7AD5752EB29C1CB3DBD2462A1CAAB0 /* YohunlUtilsPod-umbrella.h in Headers */,
+				0993F1AC1B8C75BE0053583D /* YONetwork.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9063F1B3730996FAC91058CB118945 /* ReplaceMe.m in Sources */,
+				0993F1AD1B8C75BE0053583D /* YONetwork.m in Sources */,
 				C32078B472E7F7F301258FB40C443387 /* YohunlUtilsPod-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
