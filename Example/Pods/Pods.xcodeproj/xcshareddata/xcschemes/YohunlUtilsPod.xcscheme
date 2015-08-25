@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5895E8AA51A4E5DA65B54A2D"
+               BlueprintIdentifier = "861EDC55401895C80658FAA0"
                BuildableName = "YohunlUtilsPod.framework"
                BlueprintName = "YohunlUtilsPod"
                ReferencedContainer = "container:Pods.xcodeproj">

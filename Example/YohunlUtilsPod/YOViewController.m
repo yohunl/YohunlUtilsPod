@@ -7,7 +7,7 @@
 //
 
 #import "YOViewController.h"
-
+#import <YohunlUtilsPod/YONetwork.h>
 @interface YOViewController ()
 
 @end
@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self test];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,4 +27,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void) test {
+    YONetwork *net = [YONetwork new];
+    [net getGithubReposForUser:@"yohunl" withSuccess:^(id responseObject) {
+        NSLog(@"getGithubReposForUser response = %@",responseObject);
+    } failure:^(NSError *error) {
+        NSLog(@"getGithubReposForUser error = %@",error);
+    }];
+}
 @end
