@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0993F1AE1B8C8FD80053583D /* aggret */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0993F1B11B8C8FD80053583D /* Build configuration list for PBXAggregateTarget "aggret" */;
+			buildPhases = (
+				0993F1B21B8C8FE90053583D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = aggret;
+			productName = aggret;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		475D469780421F305A6C81A1 /* Pods_YohunlUtilsPod_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A3A3B51A62C2E3CE1FDB8B /* Pods_YohunlUtilsPod_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -247,6 +261,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = yohunl;
 				TargetAttributes = {
+					0993F1AE1B8C8FD80053583D = {
+						CreatedOnToolsVersion = 6.4;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -267,6 +284,7 @@
 			targets = (
 				6003F589195388D20070C39A /* YohunlUtilsPod_Example */,
 				6003F5AD195388D20070C39A /* YohunlUtilsPod_Tests */,
+				0993F1AE1B8C8FD80053583D /* aggret */,
 			);
 		};
 /* End PBXProject section */
@@ -293,6 +311,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0993F1B21B8C8FE90053583D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Constants\nSF_TARGET_NAME=${PROJECT_NAME}\n#自定义的用来存放最后合并的framework\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n\n\n#IPHONE_DEVICE_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos\n\nWORKSPACE_NAME=${PROJECT_NAME}.xcworkspace\nYO_SCHEME=${PROJECT_NAME}\n\n#clean build是先清除原来的build\nxcodebuild -workspace ${WORKSPACE_NAME} -scheme ${YO_SCHEME} -sdk iphonesimulator -configuration \"${CONFIGURATION}\" clean build\nxcodebuild -workspace ${WORKSPACE_NAME} -scheme ${YO_SCHEME} -sdk iphoneos -configuration \"${CONFIGURATION}\" clean build\n\n# build project\n#xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" CONFIGURATION_BUILD_DIR=\"${IPHONE_DEVICE_BUILD_DIR}/arm64\" SYMROOT=\"${SYMROOT}\" ARCHS='arm64' VALID_ARCHS='arm64' $ACTION\n\n#xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\"  CONFIGURATION_BUILD_DIR=\"${IPHONE_DEVICE_BUILD_DIR}/armv7\" SYMROOT=\"${SYMROOT}\" ARCHS='armv7 armv7s' VALID_ARCHS='armv7 armv7s' $ACTION\n\n# Copy the framework structure to the universal folder (clean it first)\n# 因为framework的合并,lipo只是合并了最后的 二进制可执行文件,所以其它的需要我们自己复制过来\n#先移除原来的\nrm -rf \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\"\n\n# 合并模拟器和真机的架构\nlipo -create  \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\" -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\nopen \"${UNIVERSAL_OUTPUTFOLDER}\"";
+		};
 		983B8184917146E5442DC07E /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +465,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0993F1AF1B8C8FD80053583D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0993F1B01B8C8FD80053583D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -581,6 +626,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0993F1B11B8C8FD80053583D /* Build configuration list for PBXAggregateTarget "aggret" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0993F1AF1B8C8FD80053583D /* Debug */,
+				0993F1B01B8C8FD80053583D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "YohunlUtilsPod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
