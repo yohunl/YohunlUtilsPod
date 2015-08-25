@@ -1,0 +1,21 @@
+PODS:
+  - FBSnapshotTestCase (2.0.3):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.3)
+  - FBSnapshotTestCase/Core (2.0.3)
+  - FBSnapshotTestCase/SwiftSupport (2.0.3):
+    - FBSnapshotTestCase/Core
+  - YohunlUtilsPod (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - YohunlUtilsPod (from `../`)
+
+EXTERNAL SOURCES:
+  YohunlUtilsPod:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: d0eeca6bf87958e088b254396ae66873f971cfb1
+  YohunlUtilsPod: df3d605a7050f0ad72bd92a2f494653596e651fc
+
+COCOAPODS: 0.38.2
