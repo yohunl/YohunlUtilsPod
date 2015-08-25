@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'YohunlUtilsPod_Example', :exclusive => true do
+  pod "YohunlUtilsPod", :path => "../"
+end
+
+target 'YohunlUtilsPod_Tests', :exclusive => true do
+  pod "YohunlUtilsPod", :path => "../"
+
+  pod 'FBSnapshotTestCase'
+end
